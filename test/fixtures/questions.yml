@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pregunta: MyText
+  respuesta1: MyText
+  valor1: 1
+  next1: 1
+  respuesta2: MyText
+  valor2: 1
+  next2: 1
+  respuesta3: MyText
+  valor3: 1
+  next3: 1
+  respuesta4: MyText
+  valor4: 1
+  next4: 1
+  respuesta5: MyText
+  valor5: 1
+  next5: 1
+  respuesta6: MyText
+  valor6: 1
+  next6: 1
+  nombre_preg: MyString
+  prev: 1
+
+two:
+  pregunta: MyText
+  respuesta1: MyText
+  valor1: 1
+  next1: 1
+  respuesta2: MyText
+  valor2: 1
+  next2: 1
+  respuesta3: MyText
+  valor3: 1
+  next3: 1
+  respuesta4: MyText
+  valor4: 1
+  next4: 1
+  respuesta5: MyText
+  valor5: 1
+  next5: 1
+  respuesta6: MyText
+  valor6: 1
+  next6: 1
+  nombre_preg: MyString
+  prev: 1

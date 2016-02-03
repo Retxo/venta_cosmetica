@@ -1,0 +1,114 @@
+
+<div class="preguntas" style="border:1px solid black; height:200px">
+	<div class="pregunta">
+		<%= @question.pregunta%>
+	</div>
+	
+	<%=form_tag url_for(:controller => 'treatments', :action => 'siguiente'), :method => 'get', remote: true do%>
+	<div class="respuesta">
+	  	<%=hidden_field_tag :nombre_preg, @question.nombre_preg%>
+	   	<%=hidden_field_tag :next, @question.next1%>
+	    <%=hidden_field_tag :valor, @question.valor1%>
+	    <%=submit_tag(@question.respuesta1, class: 'col-lg-6 btn btn-default')%>
+	</div> 
+  	<%end%>
+  	
+  	
+  	<%=form_tag url_for(:controller => 'treatments', :action => 'siguiente'), :method => 'get', remote: true do%>
+  	<div class="respuesta">
+	  	<%=hidden_field_tag :nombre_preg, @question.nombre_preg%>
+	   	<%=hidden_field_tag :next, @question.next2%>
+	    <%=hidden_field_tag :valor, @question.valor2%>
+	    <%=submit_tag(@question.respuesta2, class: 'col-lg-6 btn btn-default')%>
+	</div>
+  	<%end%>
+  	
+  	<%unless @question.respuesta3 == "" %>
+  	
+	  	<%=form_tag url_for(:controller => 'treatments', :action => 'siguiente'), :method => 'get', remote: true do%>
+	  	<div class="respuesta">
+		  	<%=hidden_field_tag :nombre_preg, @question.nombre_preg%>
+		   	<%=hidden_field_tag :next, @question.next3%>
+		    <%=hidden_field_tag :valor, @question.valor3%>
+		    <%=submit_tag(@question.respuesta3, class: 'col-lg-6 btn btn-default')%>
+		</div> 	   
+	  	<%end%>
+	
+	<%end%>
+	
+  	
+
+	<%unless @question.respuesta4 == "" %>
+	
+	  	<%=form_tag url_for(:controller => 'treatments', :action => 'siguiente'), :method => 'get', remote: true do%>
+	  	<div class="respuesta">
+		  	<%=hidden_field_tag :nombre_preg, @question.nombre_preg%>
+		   	<%=hidden_field_tag :next, @question.next4%>
+		    <%=hidden_field_tag :valor, @question.valor4%>
+		    <%=submit_tag(@question.respuesta4, class: 'col-lg-6 btn btn-default')%>
+		</div>
+	  	<%end%>
+	  	
+	<%end%>
+	
+  	
+	<%unless @question.respuesta5 == "" %>
+	
+	  	<%=form_tag url_for(:controller => 'treatments', :action => 'siguiente'), :method => 'get', remote: true do%>
+	  	<div class="respuesta">
+		  	<%=hidden_field_tag :nombre_preg, @question.nombre_preg%>
+		   	<%=hidden_field_tag :next, @question.next5%>
+		    <%=hidden_field_tag :valor, @question.valor5%>
+		    <%=submit_tag(@question.respuesta5, class: 'col-lg-6 btn btn-default')%>
+		  </div>  
+	  	<%end%>
+	 	
+	<%end%>
+	
+  	
+	<%unless @question.respuesta6 == "" %>
+	
+	  	<%=form_tag url_for(:controller => 'treatments', :action => 'siguiente'), :method => 'get', remote: true do%>
+	  	<div class="respuesta">
+		  	<%=hidden_field_tag :nombre_preg, @question.nombre_preg%>
+		   	<%=hidden_field_tag :next, @question.next6%>
+		    <%=hidden_field_tag :valor, @question.valor6%>
+		    <%=submit_tag(@question.respuesta6, class: 'col-lg-6 btn btn-default')%>
+		</div> 
+	  	<%end%>
+		  	
+	<%end%>
+
+	
+  	<%unless @question.prev == nil%>
+	  	<%= form_tag url_for(:controller => 'treatments', :action => 'previa'), :method => 'get', remote: true do%>
+	  	<div class="prev">
+	  		<%=hidden_field_tag :prev, @question.prev%>
+	  		<%=submit_tag('previa', class: 'col-lg-6 btn btn-default')%>
+	  	</div>	
+	  	<%end%>
+  	<%end%>
+  	
+
+</div>
+<div class="elementos">
+	<div style="display:inline-block">
+	<%unless @relation == nil%>
+	<h3><%= @relation.hidratante.nombre%></h3>
+	<img src="./<%= @relation.hidratante.imagen%>" style="max-height:150px">
+	<%end%>
+	</div>
+	<div style="display:inline-block">
+	<%unless @relation_prot == nil%>
+	<h3><%= @relation_prot.protector.nombre%></h3>
+	<img src="./<%= @relation_prot.protector.imagen%>" style="max-height:150px">
+	<%end%>
+	</div>
+</div>
+<div class="informacion">
+	<%unless @relation == nil%>
+		<p><%= @relation.hidratante.nombre%>: <%= @relation.hidratante.aplicar%></p>	
+	<%end%>
+</div>
+  					
+			

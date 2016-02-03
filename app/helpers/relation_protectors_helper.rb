@@ -1,0 +1,2 @@
+module RelationProtectorsHelper
+end

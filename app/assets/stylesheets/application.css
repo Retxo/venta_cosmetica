@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.preguntas{
+	float:right;
+	text-align: center;
+	width:30vw;
+}
+.preguntas div, .preguntas form{
+	margin-left: auto;
+	margin-right: auto;
+}
+.pregunta{
+	width:20vw;
+	margin-top: 5px;
+	font-family: dinpro-regular, trebuchet ms;
+	color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+}
+.respuesta{
+	width: 20vw;
+	margin:1px;
+	border:1px solid black;
+	text-align: center;
+	position:relative;
+}
+.btn{
+	width:100%;
+	border:none;
+	background-color: white;
+	text-align: center;
+	cursor: pointer;
+}
+.prev{
+	position:absolute;
+	right:15px;
+	width:29vw;
+	margin:1px;
+	border:1px solid black;
+	background-color: rgba(101,232,123,0.7);
+	text-align: center;
+    bottom: 420px;
+}
+.prev .btn{
+	background-color: rgba(101,232,123,0.7);
+}
+.elementos{
+	width:70vw;
+	text-align: center;
+	font-family: dinpro-regular, trebuchet ms;
+	color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+}

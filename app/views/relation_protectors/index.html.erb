@@ -1,0 +1,20 @@
+<table>
+<tr>
+	<th>ID</th>
+	<th>Numero Terapia</th>
+	<th>Protector id</th>
+	
+</tr>
+
+<% @rprotectors.each do |p| %>
+<tr>
+	<td><%=p.id%></td>
+	<td><%=p.numero_terapia%></td>
+	<td><%=p.protector_id%></td>
+	<td><%=link_to 'Eliminar',relation_protector_path(p), method: :delete%></td>
+	<td><%= link_to 'Editar', edit_relation_protector_path(p)%></td>
+</tr>
+
+<% end %>
+</table>
+<%= link_to 'Crear hidratante', new_relation_protector_path%>

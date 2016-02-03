@@ -1,0 +1,57 @@
+<table>
+<tr>
+	<th>ID</th>
+	<th>Pregunta</th>
+	<th>R1</th>
+	<th>V1</th>
+	<th>N1</th>
+	<th>R2</th>
+	<th>V2</th>
+	<th>N2</th>
+	<th>R3</th>
+	<th>V3</th>
+	<th>N3</th>
+	<th>R4</th>
+	<th>V4</th>
+	<th>N4</th>
+	<th>R5</th>
+	<th>V5</th>
+	<th>N5</th>
+	<th>R6</th>
+	<th>V6</th>
+	<th>N6</th>
+	<th>Prev</th>
+	<th>Nombre Preg</th>
+</tr>
+
+<% @questions.each do |p| %>
+<tr>
+	<td><%=p.id%></td>
+	<td><%=p.pregunta%></td>
+	<td><%=p.respuesta1%></td>
+	<td><%=p.valor1%></td>
+	<td><%=p.next1%></td>
+	<td><%=p.respuesta2%></td>
+	<td><%=p.valor2%></td>
+	<td><%=p.next2%></td>
+	<td><%=p.respuesta3%></td>
+	<td><%=p.valor3%></td>
+	<td><%=p.next3%></td>
+	<td><%=p.respuesta4%></td>
+	<td><%=p.valor4%></td>
+	<td><%=p.next4%></td>
+	<td><%=p.respuesta5%></td>
+	<td><%=p.valor5%></td>
+	<td><%=p.next5%></td>
+	<td><%=p.respuesta6%></td>
+	<td><%=p.valor6%></td>
+	<td><%=p.next6%></td>
+	<td><%=p.prev%></td>
+	<td><%=p.nombre_preg%></td>
+	<td><%=link_to 'Eliminar',question_path(p), method: :delete%></td>
+	<td><%= link_to 'Editar', edit_question_path(p)%></td>
+</tr>
+
+<% end %>
+</table>
+<%= link_to 'Crear pregunta', new_question_path%>

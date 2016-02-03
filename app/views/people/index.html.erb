@@ -1,0 +1,43 @@
+<table>
+<tr>
+	<th>ID</th>
+	<th>Nombre</th>
+	<th>Edad</th>
+	<th>Tipo piel</th>
+	<th>Sensibilidad</th>
+	<th>Poros</th>
+	<th>Rojeces</th>
+	<th>Acne</th>
+	<th>Fototipo</th>
+	<th>Embarazada</th>
+	<th>Medicacion</th>
+	<th>Exposicion1</th>
+	<th>Exposicion2</th>
+	<th>Riesgo</th>
+	<th>Exposicion</th>
+</tr>
+
+<% @people.each do |p| %>
+<tr>
+	<td><%=p.id%></td>
+	<td><%=p.nombre%></td>
+	<td><%=p.edad%></td>
+	<td><%=p.tipo_piel%></td>
+	<td><%=p.sensibilidad%></td>
+	<td><%=p.poros%></td>
+	<td><%=p.rojeces%></td>
+	<td><%=p.acne%></td>
+	<td><%=p.fototipo%></td>
+	<td><%=p.embarazada%></td>
+	<td><%=p.medicacion%></td>
+	<td><%=p.exposicion1%></td>
+	<td><%=p.exposicion2%></td>
+	<td><%=p.riesgo%></td>
+	<td><%=p.exposicion%></td>
+	<td><%=link_to 'Eliminar',person_path(p), method: :delete%></td>
+	<td><%= link_to 'Editar', edit_person_path(p)%></td>
+</tr>
+
+<% end %>
+</table>
+<%= link_to 'Crear persona', new_person_path%>

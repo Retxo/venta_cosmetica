@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  edad: 1
+  tipo_piel: 1
+  sensibilidad: 1
+  poros: 1
+  rojeces: 1
+  acne: 1
+
+two:
+  nombre: MyString
+  edad: 1
+  tipo_piel: 1
+  sensibilidad: 1
+  poros: 1
+  rojeces: 1
+  acne: 1

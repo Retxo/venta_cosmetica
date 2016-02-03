@@ -1,0 +1,20 @@
+<table>
+<tr>
+	<th>ID</th>
+	<th>Numero Terapia</th>
+	<th>Hidratante id</th>
+	
+</tr>
+
+<% @rhidratantes.each do |p| %>
+<tr>
+	<td><%=p.id%></td>
+	<td><%=p.numero_terapia%></td>
+	<td><%=p.hidratante_id%></td>
+	<td><%=link_to 'Eliminar',relation_hidratante_path(p), method: :delete%></td>
+	<td><%= link_to 'Editar', edit_relation_hidratante_path(p)%></td>
+</tr>
+
+<% end %>
+</table>
+<%= link_to 'Crear hidratante', new_relation_hidratante_path%>
